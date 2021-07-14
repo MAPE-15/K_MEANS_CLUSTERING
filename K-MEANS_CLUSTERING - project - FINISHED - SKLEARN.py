@@ -10,6 +10,8 @@ import pandas as pd
 from DATASET_CUSTOMIZING.DATASET_READING_CUSTOMIZING_INPUT import make_dataset
 from PLOT_ANALYSIS.PLOT_ANALYSIS_INPUT import make_analysis
 
+from DATASET_CUSTOMIZING.DATASET_CUSTOMIZING_MODULE import drop_replace_na, handle_non_numeric
+
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
@@ -437,5 +439,10 @@ Lower Percentage Accuracy pole:''', str(100 - accuracy_max) + '%')
 
 # read or make some customization for the dataset
 # df = make_dataset()
+
+# df = pd.read_csv('president_heights_party.csv', sep=',')
+#
+# df = drop_replace_na(df, other_than_na=['none'])
+# df = handle_non_numeric(df, column_names=['party'])
 
 # K_Means(df)
